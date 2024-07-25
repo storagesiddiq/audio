@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+    <link rel="stylesheet" href="index2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+</head>
+<body>
+    <div class="player">
+        <h1>Audio Player</h1>
+        <audio id="audioPlayer" controls></audio>
+        <ul id="songList">
+            <li data-src="songs/song1.mp3">Song 1</li>
+            <li data-src="songs/song2.mp3">Song 2</li>
+            <li data-src="songs/song3.mp3">Song 3</li>
+            <li data-src="songs/song4.mp3">Song 4</li>
+            <li data-src="songs/song4.mp3">Song 5</li>
+        </ul>
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
+        <button id="logoutBtn">Logout</button>
+    </div>
+    <script src="index2.js"></script>
+<script>
+document.getElementById("logoutBtn").addEventListener("click", function() {
+localStorage.removeItem("loggedInUser"); // Assuming you store username in localStorage
+window.location.href = "welcome.html"; // Redirect to login page
+});
+</script>
+</body>
+</html>
